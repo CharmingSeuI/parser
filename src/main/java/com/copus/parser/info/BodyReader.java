@@ -1,0 +1,58 @@
+package com.copus.parser.info;
+
+import com.copus.parser.domain.info.body.BodyInfo;
+import com.copus.parser.domain.info.body.Content;
+import com.copus.parser.level.InfoIdRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.persistence.EntityManager;
+
+import static com.copus.parser.info.InfoReader.nodeToString;
+
+@Component
+@RequiredArgsConstructor
+@Transactional
+public class BodyReader {
+    private final EntityManager em;
+
+    private Long bodyInfoSequence = 0L;
+    private Long contentSequence = 0L;
+
+    public void read(Document doc) {
+        NodeList bodyInfos = doc.getElementsByTagName("본문정보");
+        for (int i = 0; i < bodyInfos.getLength(); i++) {
+            Node bodyInfo = bodyInfos.item(i);
+
+            Long body_info_id = bodyInfoSequence++;
+            BodyInfo bodyInfoData = new BodyInfo(body_info_id);
+            em.persist(bodyInfoData);
+
+            String level_id = bodyInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
+            InfoIdRepository.bodyInfoId.put(level_id, body_info_id);
+
+            NodeList bodyInfoChildNodes = bodyInfo.getChildNodes();
+            String content_text = "";
+            for (int j = 0; j < bodyInfoChildNodes.getLength(); j++) {
+                if (bodyInfoChildNodes.item(j).getNodeName() == "내용") {
+                    Node content = bodyInfoChildNodes.item(j);
+                    NodeList contentChildNodes = content.getChildNodes();
+                    for (int h = 0; h < contentChildNodes.getLength(); h++) {
+                        if (contentChildNodes.item(h).getNodeName() != "#text") {
+                            NodeList childNodes = contentChildNodes.item(h).getChildNodes();
+                            for (int t = 0; t < childNodes.getLength(); t++) {
+                                content_text += nodeToString(childNodes.item(t)).trim();
+                            }
+                        }
+                    }
+                }
+            }
+            Content content = new Content(contentSequence++, content_text, bodyInfoData);
+            em.persist(content);
+        }
+    }
+}
