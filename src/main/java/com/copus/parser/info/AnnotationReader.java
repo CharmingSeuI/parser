@@ -61,7 +61,7 @@ public class AnnotationReader {
                         }
                     }
                     Annotation annotationData = new Annotation(annotationSequence++, annotation_body, annotation_name, id, imageOrTable, type, annotationInfoData);
-                    em.persist(annotationData);
+                    //em.persist(annotationData);
                 }
             }
         }
