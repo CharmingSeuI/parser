@@ -5,6 +5,7 @@ import com.copus.parser.domain.info.meta.*;
 import com.copus.parser.exception.ExtraAuthorInfoException;
 import com.copus.parser.exception.ExtraMetaInfoException;
 import com.copus.parser.exception.ExtraPublishInfoException;
+import com.copus.parser.exception.MetaInfoAttributeException;
 import com.copus.parser.level.InfoIdRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -53,6 +54,9 @@ public class MetaReader {
 
             Long meta_info_id = metaInfoSequence++;
             MetaInfo metaInfoData = new MetaInfo(meta_info_id);
+            if (metaInfo.hasAttributes()) {
+                throw new MetaInfoAttributeException("메타정보의 Attr값이 존재합니다");
+            }
             em.persist(metaInfoData);
 
             //Save parent level's id for level table Parsing

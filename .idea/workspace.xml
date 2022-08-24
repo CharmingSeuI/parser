@@ -5,168 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ff2a158-6317-4c18-9c0d-38e7f51a6224" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/ParserApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/XmlReaderMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/AuthorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/CategoryBodyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/CategoryType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/CommentType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/ConnectionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/IndexTitleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/LeapFLat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/Lv1Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/Lv2Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/Lv3Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/Lv4Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/Lv5Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/NickNameType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/ReadingType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/ReferBodyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/ReferToType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/TitleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/enums/annotationType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/Annotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/AnnotationInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/Commentary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/CommentaryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/Connection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/ConnectionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/body/BodyInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/body/Content.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/AuthorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/CategoryBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/CategoryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/ChapterInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/EraInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/KingInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/MetaInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/PublishInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/Reading.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/ReadingInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/ReferBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/ReferInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/ReferTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/StoreHouse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/StoreInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/Title.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/TitleInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/info/meta/TranslatorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Lv1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Lv2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Lv3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Lv4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/domain/domain/level/Lv5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/exception/AnnotationTableException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/exception/ExtraAuthorInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/exception/ExtraMetaInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/exception/ExtraPublishInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/AnnotationReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/BodyReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/ConnectionReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/InfoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/InfoReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/MetaReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/InfoIdRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/LevelBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/LevelReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/ParserApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/XmlReaderMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/AnnotationType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/AuthorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/CategoryBodyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/CategoryType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/CommentType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/ConnectionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/IndexTitleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/LeapFLat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/Lv1Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/Lv2Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/Lv3Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/Lv4Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/Lv5Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/NickNameType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/ReadingType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/ReferBodyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/ReferToType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/enums/TitleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/Annotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/AnnotationInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/Commentary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/CommentaryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/Connection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/ConnectionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/body/BodyInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/body/Content.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/AuthorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/CategoryBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/CategoryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/ChapterInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/EraInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/KingInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/MetaInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/PublishInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/Reading.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/ReadingInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/ReferBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/ReferInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/ReferTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/StoreHouse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/StoreInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/Title.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/TitleInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/info/meta/TranslatorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Lv1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Lv2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Lv3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Lv4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/domain/domain/level/Lv5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/exception/AnnotationTableException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/exception/ExtraAuthorInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/exception/ExtraMetaInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/exception/ExtraPublishInfoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/AnnotationReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/BodyReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/CommentaryReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/ConnectionReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/InfoReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/info/MetaReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/InfoIdRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/ItemReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/Level1Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/Level2Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/Level3Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/Level4Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/Level5Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/copus/parser/level/LevelReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/ParserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/ParserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/domain/info/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/domain/info/Annotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/MetaReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/MetaReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +82,6 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/문서/카카오톡 받은 파일/한국고전번역원_한국문집총간_월고집(月皐集)_20210125 (1)" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -420,7 +258,7 @@
       <workItem from="1661339838569" duration="3340000" />
       <workItem from="1661343262828" duration="354000" />
       <workItem from="1661343651261" duration="370000" />
-      <workItem from="1661344064393" duration="29000" />
+      <workItem from="1661344064393" duration="996000" />
     </task>
     <servers />
   </component>
