@@ -12,8 +12,6 @@ import org.w3c.dom.NodeList;
 
 import javax.persistence.EntityManager;
 
-import static com.copus.parser.info.InfoReader.nodeToString;
-
 @Component
 @RequiredArgsConstructor
 @Transactional

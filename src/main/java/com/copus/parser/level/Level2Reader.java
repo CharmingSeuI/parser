@@ -36,20 +36,16 @@ public class Level2Reader {
             String type = level2Attributes.getNamedItem("type").getNodeValue();
             Lv2Type lv2Type = Lv2Type.valueOf(type);
 
-            String DCI = Optional.ofNullable(level2Attributes.getNamedItem("DCI")).map(n -> n.getNodeValue()).orElse("null");
+            String DCI = Optional.ofNullable(level2Attributes.getNamedItem("DCI")).map(Node::getNodeValue).orElse("null");
             LocalDate create_date = LocalDate.parse(level2Attributes.getNamedItem("자료생성일").getNodeValue());
 
             String level_1_id = level2.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             Lv1 lv1 = em.find(Lv1.class, level_1_id);
 
-            AnnotationInfo annotationInfo = Optional.ofNullable(InfoIdRepository.annotationInfoId.get(level_2_id))
-                    .map(n -> em.find(AnnotationInfo.class, n)).orElse(null);
-            BodyInfo bodyInfo = Optional.ofNullable(InfoIdRepository.bodyInfoId.get(level_2_id))
-                    .map(n -> em.find(BodyInfo.class, n)).orElse(null);
-            ConnectionInfo connectionInfo = Optional.ofNullable(InfoIdRepository.connectionInfoId.get(level_2_id))
-                    .map(n -> em.find(ConnectionInfo.class, n)).orElse(null);
-            MetaInfo metaInfo = Optional.ofNullable(InfoIdRepository.metaInfoId.get(level_2_id))
-                    .map(n -> em.find(MetaInfo.class, n)).orElse(null);
+            AnnotationInfo annotationInfo = InfoIdRepository.getAnnotationInfo(level_2_id, em);
+            BodyInfo bodyInfo = InfoIdRepository.getBodyInfo(level_2_id, em);
+            ConnectionInfo connectionInfo = InfoIdRepository.getConnectionInfo(level_2_id, em);
+            MetaInfo metaInfo = InfoIdRepository.getMetaInfo(level_2_id, em);
 
             Lv2 lv2 = new Lv2(level_2_id, DCI, create_date, lv2Type, annotationInfo, bodyInfo, connectionInfo, lv1, metaInfo);
             em.persist(lv2);

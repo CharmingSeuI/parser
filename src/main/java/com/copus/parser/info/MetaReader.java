@@ -20,7 +20,6 @@ import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.Optional;
 
-import static com.copus.parser.info.InfoReader.nodeToString;
 
 @Component
 @RequiredArgsConstructor

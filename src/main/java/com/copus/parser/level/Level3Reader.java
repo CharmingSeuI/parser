@@ -35,19 +35,15 @@ public class Level3Reader {
             String level_3_id = level3Attributes.getNamedItem("id").getNodeValue();
             String type = level3Attributes.getNamedItem("type").getNodeValue();
             Lv3Type lv3Type = Lv3Type.valueOf(type);
-            String DCI = Optional.ofNullable(level3Attributes.getNamedItem("DCI")).map(n -> n.getNodeValue()).orElse("null");
+            String DCI = Optional.ofNullable(level3Attributes.getNamedItem("DCI")).map(Node::getNodeValue).orElse("null");
             LocalDate create_date = LocalDate.parse(level3Attributes.getNamedItem("자료생성일").getNodeValue());
             String level_2_id = level3.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             Lv2 lv2 = em.find(Lv2.class, level_2_id);
 
-            AnnotationInfo annotationInfo = Optional.ofNullable(InfoIdRepository.annotationInfoId.get(level_3_id))
-                    .map(n -> em.find(AnnotationInfo.class, n)).orElse(null);
-            BodyInfo bodyInfo = Optional.ofNullable(InfoIdRepository.bodyInfoId.get(level_3_id))
-                    .map(n -> em.find(BodyInfo.class, n)).orElse(null);
-            ConnectionInfo connectionInfo = Optional.ofNullable(InfoIdRepository.connectionInfoId.get(level_3_id))
-                    .map(n -> em.find(ConnectionInfo.class, n)).orElse(null);
-            MetaInfo metaInfo = Optional.ofNullable(InfoIdRepository.metaInfoId.get(level_3_id))
-                    .map(n -> em.find(MetaInfo.class, n)).orElse(null);
+            AnnotationInfo annotationInfo = InfoIdRepository.getAnnotationInfo(level_3_id, em);
+            BodyInfo bodyInfo = InfoIdRepository.getBodyInfo(level_3_id, em);
+            ConnectionInfo connectionInfo = InfoIdRepository.getConnectionInfo(level_3_id, em);
+            MetaInfo metaInfo = InfoIdRepository.getMetaInfo(level_3_id, em);
 
             Lv3 lv3 = new Lv3(level_3_id, DCI, create_date, lv3Type, annotationInfo, bodyInfo, connectionInfo, lv2, metaInfo);
             em.persist(lv3);

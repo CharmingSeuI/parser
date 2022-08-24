@@ -38,15 +38,13 @@ public class Level1Reader {
 
             LocalDate create_date = LocalDate.parse(level1Attributes.getNamedItem("자료생성일").getNodeValue());
 
-            String parent_lv1 = Optional.ofNullable(level1Attributes.getNamedItem("상위서지")).map(n -> n.getNodeValue()).orElse(null);
+            String parent_lv1 = Optional.ofNullable(level1Attributes.getNamedItem("상위서지")).map(Node::getNodeValue).orElse(null);
 
             String item_id = level1.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             Item item = em.find(Item.class, item_id);
 
-            CommentaryInfo commentaryInfo = Optional.ofNullable(InfoIdRepository.commentaryInfoId.get(level_1_id))
-                    .map(n -> em.find(CommentaryInfo.class, n)).orElse(null);
-            MetaInfo metaInfo = Optional.ofNullable(InfoIdRepository.metaInfoId.get(level_1_id))
-                    .map(n -> em.find(MetaInfo.class, n)).orElse(null);
+            CommentaryInfo commentaryInfo = InfoIdRepository.getCommentaryInfo(level_1_id, em);
+            MetaInfo metaInfo = InfoIdRepository.getMetaInfo(level_1_id, em);
 
             Lv1 lv1 = new Lv1(level_1_id, create_date, parent_lv1, lv1Type, item, metaInfo, commentaryInfo);
             em.persist(lv1);
