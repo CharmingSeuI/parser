@@ -11,6 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class StoreHouse {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "store_house_id")
     private Long id;
 
@@ -20,8 +21,7 @@ public class StoreHouse {
     @JoinColumn(name = "store_info_id")
     private StoreInfo storeInfo;
 
-    public StoreHouse(Long id, String storeHouseText, StoreInfo storeInfo) {
-        this.id = id;
+    public StoreHouse(String storeHouseText, StoreInfo storeInfo) {
         this.storeHouseText = storeHouseText;
         this.storeInfo = storeInfo;
     }

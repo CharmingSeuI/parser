@@ -1,6 +1,5 @@
 package com.copus.parser.domain.info;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -13,16 +12,13 @@ import java.util.List;
  */
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class AnnotationInfo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "annotation_info_id")
     private Long id;
 
     @OneToMany(mappedBy = "annotationInfo")
     private List<Annotation> annotations = new ArrayList<>();
-
-    public AnnotationInfo(Long id) {
-        this.id = id;
-    }
 }

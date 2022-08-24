@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Connection {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "connection_id")
     private Long id;
 
@@ -24,8 +25,7 @@ public class Connection {
     @JoinColumn(name = "connection_info_id")
     private ConnectionInfo connectionInfo;
 
-    public Connection(Long id, String connectionEnd, String connectionStart, ConnectionType type, ConnectionInfo connectionInfo) {
-        this.id = id;
+    public Connection(String connectionEnd, String connectionStart, ConnectionType type, ConnectionInfo connectionInfo) {
         this.connectionEnd = connectionEnd;
         this.connectionStart = connectionStart;
         this.type = type;

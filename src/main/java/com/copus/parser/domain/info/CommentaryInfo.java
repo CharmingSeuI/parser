@@ -1,6 +1,5 @@
 package com.copus.parser.domain.info;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -13,16 +12,13 @@ import java.util.List;
  */
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class CommentaryInfo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "commentary_info_id")
     private Long id;
 
     @OneToMany(mappedBy = "commentaryInfo", cascade = CascadeType.ALL)
     private List<Commentary> commentaries = new ArrayList<>();
-
-    public CommentaryInfo(Long id) {
-        this.id = id;
-    }
 }

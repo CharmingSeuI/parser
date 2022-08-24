@@ -24,16 +24,14 @@ import javax.persistence.EntityManager;
 public class AnnotationReader {
 
     private final EntityManager em;
-    private Long annotationInfoSequence = 0L;
-    private Long annotationSequence = 0L;
 
     public void read(Document doc) {
         NodeList annotationInfos = doc.getElementsByTagName("주석정보");
         for (int i = 0; i < annotationInfos.getLength(); i++) {
             Node annotationInfo = annotationInfos.item(i);
-            Long annotation_info_id = annotationInfoSequence++;
-            AnnotationInfo annotationInfoData = new AnnotationInfo(annotation_info_id);
+            AnnotationInfo annotationInfoData = new AnnotationInfo();
             em.persist(annotationInfoData);
+            Long annotation_info_id = annotationInfoData.getId();
 
             String level_id = annotationInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             InfoIdRepository.annotationInfoId.put(level_id, annotation_info_id);
@@ -60,7 +58,7 @@ public class AnnotationReader {
                             throw new AnnotationTableException();
                         }
                     }
-                    Annotation annotationData = new Annotation(annotationSequence++, annotation_body, annotation_name, id, imageOrTable, type, annotationInfoData);
+                    Annotation annotationData = new Annotation(annotation_body, annotation_name, id, imageOrTable, type, annotationInfoData);
                     //em.persist(annotationData);
                 }
             }

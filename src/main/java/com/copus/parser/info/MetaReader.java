@@ -29,22 +29,6 @@ import static com.copus.parser.info.InfoReader.nodeToString;
 public class MetaReader {
 
     private final EntityManager em;
-    private Long metaInfoSequence = 0L;
-    private Long titleInfoSequence = 0L;
-    private Long titleSequence = 0L;
-    private Long authorInfoSequence = 0L;
-    private Long authorSequence = 0L;
-    private Long publishInfoSequence = 0L;
-    private Long storeInfoSequence =0L;
-    private Long storeHouseSequence =0L;
-    private Long referInfoSequence = 0L;
-    private Long referToSequence = 0L;
-    private Long referBodySequence = 0L;
-    private Long categoryInfoSequence = 0L;
-    private Long categorySequence = 0L;
-    private Long categoryBodySequence = 0L;
-    private Long chapterInfoSequence = 0L;
-
 
     public void read(Document doc) {
         NodeList metaInfos = doc.getElementsByTagName("메타정보");
@@ -52,12 +36,12 @@ public class MetaReader {
         for (int metaInfoIndex = 0; metaInfoIndex < metaInfos.getLength(); metaInfoIndex++) {
             Node metaInfo = metaInfos.item(metaInfoIndex);
 
-            Long meta_info_id = metaInfoSequence++;
-            MetaInfo metaInfoData = new MetaInfo(meta_info_id);
+            MetaInfo metaInfoData = new MetaInfo();
             if (metaInfo.hasAttributes()) {
                 throw new MetaInfoAttributeException("메타정보의 Attr값이 존재합니다");
             }
             em.persist(metaInfoData);
+            Long meta_info_id = metaInfoData.getId();
 
             //Save parent level's id for level table Parsing
             String level_id = metaInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
@@ -91,7 +75,7 @@ public class MetaReader {
      */
     private void readChapter(Node meta, MetaInfo metaInfo) {
         String chapter_info_text = nodeToString(meta);
-        ChapterInfo chapterInfo = new ChapterInfo(chapterInfoSequence++, chapter_info_text, metaInfo);
+        ChapterInfo chapterInfo = new ChapterInfo(chapter_info_text, metaInfo);
         em.persist(chapterInfo);
     }
 
@@ -99,8 +83,7 @@ public class MetaReader {
      * 분류 정보
      */
     private void readCategory(Node meta, MetaInfo metaInfo) {
-        Long category_info_id = categoryInfoSequence++;
-        CategoryInfo categoryInfo = new CategoryInfo(category_info_id, metaInfo);
+        CategoryInfo categoryInfo = new CategoryInfo(metaInfo);
         em.persist(categoryInfo);
 
         NodeList categories = meta.getChildNodes();
@@ -109,8 +92,7 @@ public class MetaReader {
             if (category.getNodeName().equals("#text")) continue;
 
             CategoryType categoryType = CategoryType.valueOf(category.getAttributes().getNamedItem("type").getNodeValue());
-            Long category_id = categorySequence++;
-            Category categoryData = new Category(category_id, categoryType, categoryInfo);
+            Category categoryData = new Category(categoryType, categoryInfo);
             em.persist(categoryData);
 
             NodeList categoryBodies = category.getChildNodes();
@@ -122,7 +104,7 @@ public class MetaReader {
                         .map(n -> CategoryBodyType.valueOf(n.getNodeValue())).orElse(null);
                 String category_body_text = categoryBody.getTextContent().trim();
 
-                CategoryBody categoryBodyData = new CategoryBody(categoryBodySequence++, category_body_text, categoryBodyType, categoryData);
+                CategoryBody categoryBodyData = new CategoryBody(category_body_text, categoryBodyType, categoryData);
                 em.persist(categoryBodyData);
             }
         }
@@ -132,8 +114,7 @@ public class MetaReader {
      * 참조 정보
      */
     private void readRefer(Node meta, MetaInfo metaInfo) {
-        Long refer_info_id = referInfoSequence++;
-        ReferInfo referInfo = new ReferInfo(refer_info_id, metaInfo);
+        ReferInfo referInfo = new ReferInfo(metaInfo);
         em.persist(referInfo);
 
         NodeList referToes = meta.getChildNodes();
@@ -142,7 +123,7 @@ public class MetaReader {
             if (referTo.getNodeName().equals("#text")) continue;
 
             ReferToType referToType = ReferToType.valueOf(referTo.getAttributes().getNamedItem("type").getNodeValue());
-            ReferTo referToData = new ReferTo(referToSequence++, referToType, referInfo);
+            ReferTo referToData = new ReferTo(referToType, referInfo);
             em.persist(referToData);
 
             NodeList referBodies = referTo.getChildNodes();
@@ -153,7 +134,7 @@ public class MetaReader {
                 ReferBodyType referBodyType = ReferBodyType.valueOf(referBody.getAttributes().getNamedItem("type").getNodeValue());
                 String refer_body_text = referBody.getTextContent().trim();
 
-                ReferBody referBodyData = new ReferBody(referBodySequence++, refer_body_text, referBodyType, referToData);
+                ReferBody referBodyData = new ReferBody(refer_body_text, referBodyType, referToData);
                 em.persist(referBodyData);
             }
         }
@@ -163,8 +144,7 @@ public class MetaReader {
      * 소장 정보
      */
     private void readStore(Node meta, MetaInfo metaInfo) {
-        Long store_info_id = storeInfoSequence++;
-        StoreInfo storeInfo = new StoreInfo(store_info_id, metaInfo);
+        StoreInfo storeInfo = new StoreInfo(metaInfo);
         em.persist(storeInfo);
 
         NodeList storeHouses = meta.getChildNodes();
@@ -172,7 +152,7 @@ public class MetaReader {
             Node storeHouse = storeHouses.item(storeHouseIndex);
             if (storeHouse.getNodeName() == "#text") continue;
             String store_house_text = storeHouse.getTextContent().trim();
-            StoreHouse storeHouseData = new StoreHouse(storeHouseSequence++, store_house_text, storeInfo);
+            StoreHouse storeHouseData = new StoreHouse(store_house_text, storeInfo);
             em.persist(storeHouseData);
         }
     }
@@ -235,7 +215,7 @@ public class MetaReader {
         }
 
         //null : 월고집에선 확인 불가능한 Attr( explanation_date )
-        PublishInfo publishInfo = new PublishInfo(publishInfoSequence++, data_format, explanation_date, language, original_publish_year, publish_duration_end, publish_duration_start, publish_office, publish_year, zipsu, zipsu_end, zipsu_index, zipsu_start, metaInfo);
+        PublishInfo publishInfo = new PublishInfo(data_format, explanation_date, language, original_publish_year, publish_duration_end, publish_duration_start, publish_office, publish_year, zipsu, zipsu_end, zipsu_index, zipsu_start, metaInfo);
         em.persist(publishInfo);
     }
 
@@ -243,9 +223,8 @@ public class MetaReader {
      * 저자 정보
      */
     private void readAuthor(Node meta, MetaInfo metaInfo) {
-        Long author_info_id = authorInfoSequence++;
         AuthorType type = AuthorType.valueOf(meta.getAttributes().getNamedItem("type").getNodeValue());
-        AuthorInfo authorInfoData = new AuthorInfo(author_info_id, type, metaInfo);
+        AuthorInfo authorInfoData = new AuthorInfo(type, metaInfo);
         em.persist(authorInfoData);
 
         NodeList authors = meta.getChildNodes();
@@ -291,7 +270,7 @@ public class MetaReader {
             }
 
             //null : 월고집에선 확인 불가능한 Attr( etc, nick_name, nick_name_type )
-            Author authorData = new Author(authorSequence++, birth, birth_alias, death, death_alias, etc, name_chn, name_kor, nick_name, nick_name_type, authorInfoData);
+            Author authorData = new Author(birth, birth_alias, death, death_alias, etc, name_chn, name_kor, nick_name, nick_name_type, authorInfoData);
             em.persist(authorData);
         }
     }
@@ -300,8 +279,7 @@ public class MetaReader {
      * 제목 정보
      */
     private void readTitle(Node meta, MetaInfo metaInfo) {
-        Long title_info_id = titleInfoSequence++;
-        TitleInfo titleInfo = new TitleInfo(title_info_id, metaInfo);
+        TitleInfo titleInfo = new TitleInfo(metaInfo);
         em.persist(titleInfo);
 
         NodeList titles = meta.getChildNodes();
@@ -319,7 +297,7 @@ public class MetaReader {
             }
 
             //null : 월고집에선 확인 불가능한 Attr( date_num, weather )
-            Title titleData = new Title(titleSequence++, null, title_text, type, null, titleInfo);
+            Title titleData = new Title(null, title_text, type, null, titleInfo);
             em.persist(titleData);
         }
     }

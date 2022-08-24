@@ -14,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ReferTo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "refer_to_id")
     private Long id;
 
@@ -27,8 +28,7 @@ public class ReferTo {
     @OneToMany(mappedBy = "referTo")
     private List<ReferBody> referBodies = new ArrayList<>();
 
-    public ReferTo(Long id, ReferToType type, ReferInfo referInfo) {
-        this.id = id;
+    public ReferTo(ReferToType type, ReferInfo referInfo) {
         this.type = type;
         this.referInfo = referInfo;
     }

@@ -15,6 +15,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AuthorInfo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_info_id")
     private Long id;
 
@@ -25,8 +26,7 @@ public class AuthorInfo {
     @JoinColumn(name = "meta_info_id")
     private MetaInfo metaInfo;
 
-    public AuthorInfo(Long id, AuthorType type, MetaInfo metaInfo) {
-        this.id = id;
+    public AuthorInfo(AuthorType type, MetaInfo metaInfo) {
         this.type = type;
         this.metaInfo = metaInfo;
     }

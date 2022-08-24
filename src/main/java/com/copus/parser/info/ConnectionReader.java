@@ -22,16 +22,14 @@ import javax.persistence.EntityManager;
 public class ConnectionReader {
 
     private final EntityManager em;
-    private Long connectionInfoSequence = 0L;
-    private Long connectionSequence = 0L;
 
     public void read(Document doc) {
         NodeList connectionInfos = doc.getElementsByTagName("연계정보");
         for (int i = 0; i < connectionInfos.getLength(); i++) {
             Node connectionInfo = connectionInfos.item(i);
-            Long connection_info_id = connectionInfoSequence++;
-            ConnectionInfo connectionInfoData = new ConnectionInfo(connection_info_id);
+            ConnectionInfo connectionInfoData = new ConnectionInfo();
             em.persist(connectionInfoData);
+            Long connection_info_id = connectionInfoData.getId();
 
             String level_id = connectionInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             InfoIdRepository.connectionInfoId.put(level_id, connection_info_id);
@@ -44,7 +42,7 @@ public class ConnectionReader {
                     String connection_start = connectionAttributes.getNamedItem("연계시작").getNodeValue().trim();
                     String connection_end = connectionAttributes.getNamedItem("연계종료").getNodeValue().trim();
 
-                    Connection connection = new Connection(connectionSequence++,connection_end, connection_start, type, connectionInfoData);
+                    Connection connection = new Connection(connection_end, connection_start, type, connectionInfoData);
                     em.persist(connection);
                 }
             }

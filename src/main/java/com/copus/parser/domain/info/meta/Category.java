@@ -14,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Category {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
     private Long id;
 
@@ -28,8 +29,7 @@ public class Category {
     private List<CategoryBody> categoryBodies = new ArrayList<>();
 
 
-    public Category(Long id, CategoryType type, CategoryInfo categoryInfo) {
-        this.id = id;
+    public Category(CategoryType type, CategoryInfo categoryInfo) {
         this.type = type;
         this.categoryInfo = categoryInfo;
     }

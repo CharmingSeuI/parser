@@ -20,17 +20,15 @@ import static com.copus.parser.info.InfoReader.nodeToString;
 public class BodyReader {
     private final EntityManager em;
 
-    private Long bodyInfoSequence = 0L;
-    private Long contentSequence = 0L;
 
     public void read(Document doc) {
         NodeList bodyInfos = doc.getElementsByTagName("본문정보");
         for (int i = 0; i < bodyInfos.getLength(); i++) {
             Node bodyInfo = bodyInfos.item(i);
 
-            Long body_info_id = bodyInfoSequence++;
-            BodyInfo bodyInfoData = new BodyInfo(body_info_id);
+            BodyInfo bodyInfoData = new BodyInfo();
             em.persist(bodyInfoData);
+            Long body_info_id = bodyInfoData.getId();
 
             String level_id = bodyInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
             InfoIdRepository.bodyInfoId.put(level_id, body_info_id);
@@ -51,7 +49,7 @@ public class BodyReader {
                     }
                 }
             }
-            Content content = new Content(contentSequence++, content_text, bodyInfoData);
+            Content content = new Content(content_text, bodyInfoData);
             em.persist(content);
         }
     }

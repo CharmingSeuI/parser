@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Author {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "author_id")
     private Long id;
 
@@ -33,8 +34,7 @@ public class Author {
     @JoinColumn(name = "author_info_id")
     private AuthorInfo authorInfo;
 
-    public Author(Long id, String birth, String birthAlias, String death, String deathAlias, String etc, String nameChn, String nameKor, String nickName, NickNameType nickNameType, AuthorInfo authorInfo) {
-        this.id = id;
+    public Author(String birth, String birthAlias, String death, String deathAlias, String etc, String nameChn, String nameKor, String nickName, NickNameType nickNameType, AuthorInfo authorInfo) {
         this.birth = birth;
         this.birthAlias = birthAlias;
         this.death = death;

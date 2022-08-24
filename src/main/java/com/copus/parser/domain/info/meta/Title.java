@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Title {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "title_id")
     private Long id;
 
@@ -29,8 +30,7 @@ public class Title {
     @JoinColumn(name = "title_info_id")
     private TitleInfo titleInfo;
 
-    public Title(Long id, String dateNum, String titleText, TitleType type, String weather, TitleInfo titleInfo) {
-        this.id = id;
+    public Title(String dateNum, String titleText, TitleType type, String weather, TitleInfo titleInfo) {
         this.dateNum = dateNum;
         this.titleText = titleText;
         this.type = type;

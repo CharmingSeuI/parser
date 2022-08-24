@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CategoryInfo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_info_id")
     private Long id;
 
@@ -26,8 +27,7 @@ public class CategoryInfo {
     @JoinColumn(name = "meta_info_id")
     private MetaInfo metaInfo;
 
-    public CategoryInfo(Long id, MetaInfo metaInfo) {
-        this.id = id;
+    public CategoryInfo(MetaInfo metaInfo) {
         this.metaInfo = metaInfo;
     }
 }

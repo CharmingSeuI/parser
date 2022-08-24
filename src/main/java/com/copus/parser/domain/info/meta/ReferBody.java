@@ -12,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ReferBody {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "refer_body_id")
     private Long id;
 
@@ -24,8 +25,7 @@ public class ReferBody {
     @JoinColumn(name = "refer_to_id")
     private ReferTo referTo;
 
-    public ReferBody(Long id, String referBodyText, ReferBodyType type, ReferTo referTo) {
-        this.id = id;
+    public ReferBody(String referBodyText, ReferBodyType type, ReferTo referTo) {
         this.referBodyText = referBodyText;
         this.type = type;
         this.referTo = referTo;

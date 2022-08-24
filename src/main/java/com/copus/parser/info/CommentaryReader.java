@@ -25,15 +25,13 @@ import java.util.Optional;
 public class CommentaryReader {
     private final EntityManager em;
 
-    private Long commentaryInfoSequence = 0L;
-
     public void read(Document doc) {
         NodeList commentaryInfos = doc.getElementsByTagName("해설정보");
         Node commentaryInfo = commentaryInfos.item(0);
-        Long commentary_info_id = commentaryInfoSequence++;
 
-        CommentaryInfo commentaryInfoData = new CommentaryInfo(commentary_info_id);
+        CommentaryInfo commentaryInfoData = new CommentaryInfo();
         em.persist(commentaryInfoData);
+        Long commentary_info_id = commentaryInfoData.getId();
 
         String level_id = commentaryInfo.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
         InfoIdRepository.commentaryInfoId.put(level_id, commentary_info_id);

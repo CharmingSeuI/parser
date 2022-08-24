@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Annotation {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "annotation_id")
     private Long id;
 
@@ -31,8 +32,7 @@ public class Annotation {
     @JoinColumn(name = "annotation_info_id")
     private AnnotationInfo annotationInfo;
 
-    public Annotation(Long id, String annotationBody, String annotationName, String contentId, String imageOrTable, AnnotationType type, AnnotationInfo annotationInfo) {
-        this.id = id;
+    public Annotation(String annotationBody, String annotationName, String contentId, String imageOrTable, AnnotationType type, AnnotationInfo annotationInfo) {
         this.annotationBody = annotationBody;
         this.annotationName = annotationName;
         this.contentId = contentId;

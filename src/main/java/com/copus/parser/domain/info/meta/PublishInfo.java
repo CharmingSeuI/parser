@@ -15,6 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class PublishInfo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publish_info_id")
     private Long id;
 
@@ -23,7 +24,6 @@ public class PublishInfo {
 
     //해제 작성일
     private LocalDate explanationDate;
-
 
     //언어
     private String language;
@@ -51,8 +51,7 @@ public class PublishInfo {
     @JoinColumn(name = "meta_info_id")
     private MetaInfo metaInfo;
 
-    public PublishInfo(Long id, String dataFormat, LocalDate explanationDate, String language, String originalPublishYear, String publishDurationEnd, String publishDurationStart, String publishOffice, String publishYear, String zipsu, String zipsuEnd, String zipsuIndex, String zipsuStart, MetaInfo metaInfo) {
-        this.id = id;
+    public PublishInfo(String dataFormat, LocalDate explanationDate, String language, String originalPublishYear, String publishDurationEnd, String publishDurationStart, String publishOffice, String publishYear, String zipsu, String zipsuEnd, String zipsuIndex, String zipsuStart, MetaInfo metaInfo) {
         this.dataFormat = dataFormat;
         this.explanationDate = explanationDate;
         this.language = language;

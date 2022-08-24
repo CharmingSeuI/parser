@@ -11,6 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Content {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "content_id")
     private Long id;
 
@@ -21,8 +22,7 @@ public class Content {
     @JoinColumn(name = "body_info_id")
     private BodyInfo bodyInfo;
 
-    public Content(Long id, String contentText, BodyInfo bodyInfo) {
-        this.id = id;
+    public Content(String contentText, BodyInfo bodyInfo) {
         this.contentText = contentText;
         this.bodyInfo = bodyInfo;
     }
