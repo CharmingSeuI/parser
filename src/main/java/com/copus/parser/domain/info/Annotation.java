@@ -1,5 +1,6 @@
 package com.copus.parser.domain.info;
 
+
 import com.copus.parser.domain.enums.AnnotationType;
 import lombok.AccessLevel;
 import lombok.Getter;

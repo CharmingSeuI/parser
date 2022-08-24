@@ -1,6 +1,5 @@
 package com.copus.parser.info;
 
-import com.copus.parser.domain.domain.enums.*;
 import com.copus.parser.domain.enums.*;
 import com.copus.parser.domain.info.meta.*;
 import com.copus.parser.exception.ExtraAuthorInfoException;
