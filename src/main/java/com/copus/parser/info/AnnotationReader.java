@@ -16,6 +16,8 @@ import org.w3c.dom.NodeList;
 
 import javax.persistence.EntityManager;
 
+import static com.copus.parser.info.InfoReader.nodeToString;
+
 
 @Component
 @Slf4j
@@ -52,14 +54,14 @@ public class AnnotationReader {
                         if (annotationChildNodes.item(h).getNodeName() == "주석명") {
                             annotation_name = annotationChildNodes.item(h).getTextContent().trim();
                         } else if (annotationChildNodes.item(h).getNodeName() == "주석내용") {
-                            annotation_body = annotationChildNodes.item(h).getTextContent().trim();
+                            annotation_body = nodeToString(annotationChildNodes.item(h));
                         } else if (annotationChildNodes.item(h).getNodeName() != "#text") {
                             log.info("처리할 수 없는 주석 필드입니다");
                             throw new AnnotationTableException();
                         }
                     }
                     Annotation annotationData = new Annotation(annotation_body, annotation_name, id, imageOrTable, type, annotationInfoData);
-                    //em.persist(annotationData);
+                    em.persist(annotationData);
                 }
             }
         }

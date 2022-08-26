@@ -5,16 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ff2a158-6317-4c18-9c0d-38e7f51a6224" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/ParserApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/XmlReaderMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/AnnotationReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/BodyReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/ConnectionReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/ConnectionReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/InfoReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/info/MetaReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/InfoIdRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/InfoIdRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level1Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level1Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level2Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level2Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level3Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level3Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level4Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level4Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level5Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/copus/parser/level/Level5Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/AnnotationReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/AnnotationReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/BodyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/BodyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/ConnectionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/ConnectionReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/InfoReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/InfoReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/MetaReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/info/MetaReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/InfoIdRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/InfoIdRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level1Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level1Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level2Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level2Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level3Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level3Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level4Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level4Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level5Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/copus/parser/level/Level5Reader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +49,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -45,6 +65,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -91,6 +112,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/문서/카카오톡 받은 파일/한국고전번역원_한국문집총간_월고집(月皐集)_20210125 (1)" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -100,7 +123,7 @@
     <property name="project.structure.last.edited" value="패싯" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -110,6 +133,12 @@
       <recent name="C:\Users\tlgur\.intelliJ\parser" />
       <recent name="C:\Users\tlgur\.intelliJ\parser\src\main\resources" />
       <recent name="C:\Users\tlgur\.intelliJ\parser\src\main\java\com\copus\parser" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.copus.parser.info" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ParserApplication">
@@ -145,6 +174,98 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="InfoReaderTest.myNodeToString (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.copus.parser.info.InfoReaderTest.myNodeToString&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="InfoReaderTest.nodeToStringForChapter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.copus.parser.info.InfoReaderTest.nodeToStringForChapter&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="InfoReaderTest.nodeToStringForTitleInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.copus.parser.info.InfoReaderTest.nodeToStringForTitleInfo&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="InfoReaderTest.text" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.copus.parser.info.InfoReaderTest.text&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -247,7 +368,19 @@
     <list>
       <item itemvalue="Spring Boot.ParserApplication" />
       <item itemvalue="애플리케이션.XmlReaderMain" />
+      <item itemvalue="Gradle.InfoReaderTest.text" />
+      <item itemvalue="Gradle.InfoReaderTest.myNodeToString (1)" />
+      <item itemvalue="Gradle.InfoReaderTest.nodeToStringForChapter" />
+      <item itemvalue="Gradle.InfoReaderTest.nodeToStringForTitleInfo" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.InfoReaderTest.nodeToStringForTitleInfo" />
+        <item itemvalue="Gradle.InfoReaderTest.nodeToStringForChapter" />
+        <item itemvalue="Gradle.InfoReaderTest.myNodeToString (1)" />
+        <item itemvalue="Gradle.InfoReaderTest.text" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -269,7 +402,11 @@
       <workItem from="1661339838569" duration="3340000" />
       <workItem from="1661343262828" duration="354000" />
       <workItem from="1661343651261" duration="370000" />
-      <workItem from="1661344064393" duration="2777000" />
+      <workItem from="1661344064393" duration="3299000" />
+      <workItem from="1661406172282" duration="3700000" />
+      <workItem from="1661411128564" duration="977000" />
+      <workItem from="1661417569547" duration="576000" />
+      <workItem from="1661504762458" duration="9805000" />
     </task>
     <servers />
   </component>

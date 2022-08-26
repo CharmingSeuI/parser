@@ -12,6 +12,8 @@ import org.w3c.dom.NodeList;
 
 import javax.persistence.EntityManager;
 
+import static com.copus.parser.info.InfoReader.nodeToString;
+
 @Component
 @RequiredArgsConstructor
 @Transactional
@@ -35,16 +37,8 @@ public class BodyReader {
             String content_text = "";
             for (int j = 0; j < bodyInfoChildNodes.getLength(); j++) {
                 if (bodyInfoChildNodes.item(j).getNodeName() == "내용") {
-                    Node content = bodyInfoChildNodes.item(j);
-                    NodeList contentChildNodes = content.getChildNodes();
-                    for (int h = 0; h < contentChildNodes.getLength(); h++) {
-                        if (contentChildNodes.item(h).getNodeName() != "#text") {
-                            NodeList childNodes = contentChildNodes.item(h).getChildNodes();
-                            for (int t = 0; t < childNodes.getLength(); t++) {
-                                content_text += nodeToString(childNodes.item(t)).trim();
-                            }
-                        }
-                    }
+                    String textContent = bodyInfoChildNodes.item(j).getTextContent();
+                    content_text = nodeToString(bodyInfoChildNodes.item(j));
                 }
             }
             Content content = new Content(content_text, bodyInfoData);
